@@ -1,8 +1,8 @@
 alert("Bonjour et bienvenue");
 //Ask the user for have his name 
-var userName = prompt("Veuillez entrer votre pseudo, puis validez");
+var userName = prompt("Veuillez entrer votre pseudo, puis validez")
 //aske the user for have his choice
-var userChoice = prompt("Tu veux jouer " + userName + ", parfait moi aussi \n pierre, feuille ou ciseaux ?")
+var userChoice = prompt("Tu veux jouer " + userName + ", parfait moi aussi \n pierre, feuille ou ciseaux ?").toLowerCase();;
 
 //Create random number for the compunter
 var computerChoise =  Math.random();
@@ -25,22 +25,22 @@ else if(computerChoise === "feuille" && userChoice === "pierre"){
      whoWin ="ordinateur";
 }
 else if(computerChoise === "ciseaux" && userChoice === "feuille"){
-     whoWin = "ordinateur"
+     whoWin = "ordinateur";
 }
 else if(userChoice === "pierre" && computerChoise === "ciseaux"){
-     whoWin = "humain"
+     whoWin = "humain";
 }
 else if(userChoice === "feuille" && computerChoise === "pierre"){
-     whoWin = "humain"
+     whoWin = "humain";
 }
 else if(userChoice === "ciseaux" && computerChoise === "feuille"){
-     whoWin = "humain"
+     whoWin = "humain";
 }
 else if(userChoice === computerChoise){
-     whoWin ="nul"
+     whoWin ="nul";
 }
 else{
-    prompt("Merci de rentrer une valeur correcte (pierre, feuille ou ciseaux")
+     whoWin ="wrong";
 };
 
 // Create variable for counter 
@@ -54,11 +54,11 @@ else if(whoWin === "nul"){
     sentenceWin ="Match nul pour cette manche"
 }
 else{
-    sentenceWin ="Merci de rentrer une valeur correcte (pierre, feuille ou ciseaux"
+    prompt("Merci de rentrer une valeur correcte (pierre, feuille ou ciseaux)")
 }
 
 
-
+// Display the result
 var result = alert("L'ordinateur fait " + computerChoise + "\n tu as fait " + userChoice +"\n\n" + sentenceWin)
 
 
