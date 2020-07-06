@@ -1,3 +1,5 @@
+
+function game(){
 alert("Bonjour et bienvenue sur le site de shifumi");
 //Ask the user to have his name 
 var userName = prompt("Veuillez entrer votre pseudo, puis validez");
@@ -33,13 +35,14 @@ else{
     var sentenceWin ="Match nul pour cette manche"
 };
 
-
-
-
 // Display the result
-var result = alert("L'ordinateur fait " + computerChoice + "\n tu as fait " + userChoice +"\n\n" + sentenceWin)
-
-
-
-
-
+var result = alert("L'ordinateur fait " + computerChoice + "\n tu as fait " + userChoice +"\n\n" + sentenceWin);
+};
+//Ask for  replay
+game();
+var replay = prompt("Voulez vous rejouer ? oui ou non");
+while(replay != "oui" && replay != "non")
+    var replay = prompt("Voulez vous rejouer ? Veuillez repondre par 'oui' ou 'non'") 
+if(replay === "oui"){
+    game();
+}
