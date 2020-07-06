@@ -1,57 +1,43 @@
-
-alert("Bonjour et bienvenue");
-//Ask the user for have his name 
-var userName = prompt("Veuillez entrer votre pseudo, puis validez")
-//aske the user for have his choice
+alert("Bonjour et bienvenue sur le site de shifumi");
+//Ask the user to have his name 
+var userName = prompt("Veuillez entrer votre pseudo, puis validez");
+while(userName.length < 2 || userName.length > 20) {
+    var userName = prompt("Veuillez entrer votre pseudo entre 2 et 22 caracteres, puis validez")
+};
+//ask the user to have his choice 
 var userChoice = prompt("Tu veux jouer " + userName + ", parfait moi aussi \n pierre, feuille ou ciseaux ?").toLowerCase();
+while(userChoice != "pierre" && userChoice != "feuille" && userChoice != "ciseaux"){
+    var userChoice = prompt("Veuillez rentrer une donnée valide (pierre, feuille ou ciseaux)")
+};
 //Create random number for the compunter
-var computerChoise = Math.random();
-// Max length for userName
-
-if(userChoice.length > 20){
-     // ????????????????????????????????????
-     };
-
-//Create condition for assign random number to triple choice
-
-if(computerChoise <=0.33){
-    computerChoise ="pierre";
+var computerChoice = Math.random();
+//Create condition to assign random number to triple choice
+if(computerChoice <=0.33){
+    computerChoice ="pierre";
 }
-else if(computerChoise <=0.66){
-    computerChoise="feuille";
+else if(computerChoice <=0.66){
+    computerChoice="feuille";
 }
 else{
-    computerChoise="ciseaux";
+    computerChoice="ciseaux";
 };
 
-// Create condition for watch who is winning
-if((computerChoise === "pierre" && userChoice === "ciseaux") || (computerChoise === "feuille" && userChoice === "pierre") || (computerChoise === "ciseaux" && userChoice === "feuille") ){
-     var userWin = false
+// Creates condition to watch who is winning
+if((computerChoice === "pierre" && userChoice === "ciseaux") || (computerChoice === "feuille" && userChoice === "pierre") || (computerChoice === "ciseaux" && userChoice === "feuille") ){
+    var sentenceWin = "Tu as perdu";
 }
-else if((userChoice === "pierre" && computerChoise === "ciseaux") || (userChoice === "feuille" && computerChoise === "pierre") || (userChoice === "ciseaux" && computerChoise === "feuille")){
-     var userWin = true
-}
+else if((userChoice === "pierre" && computerChoice === "ciseaux") || (userChoice === "feuille" && computerChoice === "pierre") || (userChoice === "ciseaux" && computerChoice === "feuille")){
+    var sentenceWin = "C'est toi qui à gagné, bravo !";
+}   
 else{
-     var userDraw = true
+    var sentenceWin ="Match nul pour cette manche"
 };
 
 
-
-
-// Create variable for counter 
-if(userWin === true){
-    var sentenceWin = "C'est toi qui à gagné, bravo !"
-}
-else if(!userWin){
-    sentenceWin = "Tu as perdu"
-}
-else{
-    sentenceWin ="Match nul pour cette manche"
-}
 
 
 // Display the result
-var result = alert("L'ordinateur fait " + computerChoise + "\n tu as fait " + userChoice +"\n\n" + sentenceWin)
+var result = alert("L'ordinateur fait " + computerChoice + "\n tu as fait " + userChoice +"\n\n" + sentenceWin)
 
 
 
