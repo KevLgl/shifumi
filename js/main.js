@@ -3,6 +3,7 @@ var playerScore = 0;
 var computerScore = 0;
 alert("Bonjour et bienvenue sur le site de shifumi");
 console.log(test);
+test("2")
 
 //Ask the user to have his name 
 var userName = prompt("Veuillez entrer votre pseudo, puis validez");
